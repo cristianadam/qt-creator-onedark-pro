@@ -1,0 +1,16 @@
+{
+    "Id" : "onedarkpro",
+    "Name" : "OneDark Pro",
+    "Version" : "${IDE_VERSION}",
+    "CompatVersion" : "${IDE_VERSION_COMPAT}",
+    "Vendor" : "Cristian Adam",
+    "VendorId" : "cristianadam",
+    "Copyright" : "(C) 2013-2022 Binaryify, Cristian Adam, ${IDE_COPYRIGHT}",
+    "License" : "MIT",
+    "SoftLoadable" : true,
+    "Description" : "Atom's iconic One Dark theme.",
+    "LongDescription" : ${LONG_DESCRIPTION},
+    "Url" : "https://github.com/cristianadam/qt-creator-onedark-pro",
+    "DocumentationUrl" : "",
+    ${IDE_PLUGIN_DEPENDENCIES}
+}

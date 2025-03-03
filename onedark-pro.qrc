@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>onedark-pro.creatortheme</file>
+        <file>onedark-pro.figmatokens</file>
+        <file>onedark-pro.xml</file>
+    </qresource>
+</RCC>
