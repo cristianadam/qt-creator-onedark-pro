@@ -1,9 +1,14 @@
 #include <coreplugin/coreconstants.h>
 #include <coreplugin/icontext.h>
 #include <coreplugin/icore.h>
+#include <coreplugin/manhattanstyle.h>
 #include <extensionsystem/iplugin.h>
 #include <utils/filepath.h>
 #include <utils/fileutils.h>
+
+#include <phantom/phantomstyle.h>
+
+#include <QApplication>
 
 using namespace Core;
 using namespace Utils;
@@ -54,6 +59,15 @@ public:
             settings->setValue(schemeFileNamesKey, schemeFileNames);
 
             ICore::askForRestart(tr("The OneDark Pro theme change will take effect after restart."));
+        }
+
+        const auto *proxyStyle = qobject_cast<QProxyStyle *>(QApplication::style());
+        const bool havePhantom = proxyStyle && proxyStyle->baseStyle()->objectName() == "Phantom";
+        if (!havePhantom && !qEnvironmentVariableIsSet("QTCREATOR_USE_DEFAULT_STYLE")) {
+            auto manhattanStyle = new ManhattanStyle(QApplication::style()->name());
+            manhattanStyle->setBaseStyle(new PhantomStyle);
+
+            QApplication::setStyle(manhattanStyle);
         }
     }
 };

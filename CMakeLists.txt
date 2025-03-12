@@ -29,6 +29,11 @@ if(WITH_TESTS)
   enable_testing()
 endif()
 
+include(FetchContent)
+FetchContent_Declare(PhantomStyle
+  GIT_REPOSITORY "https://github.com/cristianadam/phantomstyle.git")
+FetchContent_MakeAvailable(PhantomStyle)
+
 add_qtc_plugin(OneDarkPro
   LONG_DESCRIPTION_MD README.md
   PLUGIN_DEPENDS
@@ -37,6 +42,7 @@ add_qtc_plugin(OneDarkPro
     Qt::Widgets
     QtCreator::ExtensionSystem
     QtCreator::Utils
+    PhantomStyle
   SOURCES
     README.md
     onedark-pro.cpp
