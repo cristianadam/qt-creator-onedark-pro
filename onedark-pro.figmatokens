@@ -19,6 +19,7 @@ Token_Text_Default=ffabb2bf
 Token_Text_Muted=ff858c98
 Token_Text_Subtle=ff6c737f
 Token_Text_Accent=ff61afef
+Token_Text_On_Accent=ffd7dae0
 
 Token_Stroke_Strong=ffd7dae0
 Token_Stroke_Muted=ffabb2bf
